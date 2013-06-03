@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/login"
+    	android:layout_above="@+id/footer"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/mainContent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="logo"
+            android:src="@drawable/logo" />
+        
+        <LinearLayout 
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:id="@+id/mainContent"
+            android:orientation="vertical">
+
+	        <com.evan.aorta.utils.CustomEditText
+	            android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:id="@+id/username"
+	            android:hint="Username"
+	            android:background="@drawable/edit_custom"
+	            android:layout_marginBottom="10dp"
+	            android:textColor="#333"/>
+	
+	        <com.evan.aorta.utils.CustomEditText
+	            android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:id="@+id/password"
+	            android:hint="Password"
+	            android:background="@drawable/ediit"
+	            android:layout_marginBottom="10dp"
+	            android:inputType="textPassword"
+	            android:textColor="#333"/>
+	        
+	        <com.evan.aorta.utils.CustomButton
+	            android:id="@+id/button"
+	            android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:layout_marginBottom="20dp"
+	            android:background="@drawable/button_custom"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:text="Sign in"
+	            android:textColor="#FFF"
+	            android:textSize="16sp"
+	            style="@style/AudioFileInfoOverlayText" />
+	        
+	        </LinearLayout>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/register"
+        android:visibility="gone"
+    	android:layout_above="@+id/footer"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/mainContent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="logo"
+            android:src="@drawable/logo" />
+        
+        <LinearLayout 
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:id="@+id/mainContent"
+            android:orientation="vertical">
+
+	        <com.evan.aorta.utils.CustomEditText
+	            android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:id="@+id/usernameRegister"
+	            android:hint="Username"
+	            android:background="@drawable/edit_custom"
+	            android:layout_marginBottom="10dp"
+	            android:textColor="#333"/>
+	
+	        <com.evan.aorta.utils.CustomEditText
+	            android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:id="@+id/emailRegister"
+	            android:hint="Email"
+	            android:background="@drawable/ediit"
+	            android:layout_marginBottom="10dp"
+	            android:textColor="#333"/>
+	        
+	        <com.evan.aorta.utils.CustomEditText
+	            android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:id="@+id/passwordRegister"
+	            android:hint="Password"
+	            android:background="@drawable/ediit"
+	            android:layout_marginBottom="10dp"
+	            android:inputType="textPassword"
+	            android:textColor="#333"/>
+	        
+	        <com.evan.aorta.utils.CustomButton
+	            android:id="@+id/buttonRegister"
+	            android:layout_width="fill_parent"
+	            android:layout_height="45dp"
+	            android:layout_marginBottom="20dp"
+	            android:background="@drawable/button_custom"
+	            android:paddingLeft="15dp"
+	            android:paddingRight="15dp"
+	            android:text="Register"
+	            android:textColor="#FFF"
+	            android:textSize="16sp"
+	            style="@style/AudioFileInfoOverlayText" />
+	        
+	        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#096BC9">
+        
+        <com.evan.aorta.utils.CustomButton 
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" 
+            android:text="Sign in"
+            android:background="@drawable/active"
+            android:textColor="#FFF"/>
+        
+        <LinearLayout 
+            android:layout_width="1px"
+            android:background="#FFF"
+            android:layout_height="fill_parent"/>
+        
+        <com.evan.aorta.utils.CustomButton
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" 
+            android:text="Register"
+            android:background="#096BC9"
+            android:textColor="#FFF"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
